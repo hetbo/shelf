@@ -15,5 +15,10 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require-dev": {
+        "orchestra/testbench": "10.x-dev"
+    },
+    "require": {
+        "php": ">=8.1"
+    }
 }
