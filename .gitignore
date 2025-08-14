@@ -1,0 +1,22 @@
+# Composer dependencies
+/vendor/
+
+# Node dependencies (if you ever add frontend assets)
+node_modules/
+
+# Environment files
+.env
+.env.*.backup
+
+# IDE / editor settings
+/.idea/
+/.vscode/
+/*.sublime-workspace
+/*.sublime-project
+
+# System files
+.DS_Store
+Thumbs.db
+
+# PHPUnit / Testbench cache
+.phpunit.result.cache
