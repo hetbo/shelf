@@ -1,0 +1,19 @@
+{
+    "name": "hetbo/shelf",
+    "description": "smart file management system for Laravel applications",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hetbo\\Shelf\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hosein",
+            "email": "hetbo98@yahoo.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
