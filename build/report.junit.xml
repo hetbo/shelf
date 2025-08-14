@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Hetbo\Shelf\Tests\ServiceProviderTest" file="Service Provider (Hetbo\Shelf\Tests\ServiceProvider)" tests="3" assertions="5" errors="0" failures="0" skipped="0" time="0.514401">
+    <testcase name="It merges config without overriding existing values" file="Service Provider (Hetbo\Shelf\Tests\ServiceProvider)::It merges config without overriding existing values" class="Hetbo\Shelf\Tests\ServiceProviderTest" classname="Hetbo.Shelf.Tests.ServiceProviderTest" assertions="2" time="0.472848"/>
+    <testcase name="It registers the package configuration" file="Service Provider (Hetbo\Shelf\Tests\ServiceProvider)::It registers the package configuration" class="Hetbo\Shelf\Tests\ServiceProviderTest" classname="Hetbo.Shelf.Tests.ServiceProviderTest" assertions="2" time="0.023549"/>
+    <testcase name="It can be registered" file="Service Provider (Hetbo\Shelf\Tests\ServiceProvider)::It can be registered" class="Hetbo\Shelf\Tests\ServiceProviderTest" classname="Hetbo.Shelf.Tests.ServiceProviderTest" assertions="1" time="0.018004"/>
+  </testsuite>
+</testsuites>

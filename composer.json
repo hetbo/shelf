@@ -25,11 +25,12 @@
         "illuminate/contracts": "^12.0"
     },
     "require-dev": {
+        "larastan/larastan": "^3.6.0",
         "laravel/pint": "^1.24.0",
         "nunomaduro/collision": "^8.1.1",
-        "larastan/larastan": "^3.6.0",
         "orchestra/testbench": "^10.4.0",
         "pestphp/pest": "^3.8.2",
+        "pestphp/pest-plugin-laravel": "^3.2",
         "phpstan/extension-installer": "^1.4.3",
         "phpstan/phpstan-deprecation-rules": "^2.0",
         "phpstan/phpstan-phpunit": "^2.0"
