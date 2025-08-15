@@ -1,2 +1,2 @@
 # shelf
-smart file management system for laravel applications
+Streamlined Handling Engine for Laravel Files
