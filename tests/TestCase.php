@@ -23,5 +23,7 @@ class TestCase extends Orchestra
     public function getEnvironmentSetUp($app)
     {
         config()->set('database.default', 'testing');
+        $migration = include __DIR__.'/database/migrations/0000_00_00_000002_create_test_models_table.php';
+        $migration->up();
     }
 }
