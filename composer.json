@@ -1,6 +1,6 @@
 {
     "name": "hetbo/shelf",
-    "description": "smart file management system for laravel applications",
+    "description": "Streamlined Handling Engine for Laravel Files",
     "type": "library",
     "homepage": "https://github.com/hetbo/shelf",
     "license": "MIT",
@@ -11,7 +11,9 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Hetbo\\Shelf\\Tests\\": "tests/"
+            "Hetbo\\Shelf\\Tests\\": "tests/",
+            "Hetbo\\Shelf\\Tests\\Database\\Factories\\": "tests/database/factories/",
+            "Hetbo\\Shelf\\Database\\Factories\\": "database/factories/"
         }
     },
     "authors": [
@@ -33,7 +35,8 @@
         "pestphp/pest-plugin-laravel": "^3.2",
         "phpstan/extension-installer": "^1.4.3",
         "phpstan/phpstan-deprecation-rules": "^2.0",
-        "phpstan/phpstan-phpunit": "^2.0"
+        "phpstan/phpstan-phpunit": "^2.0",
+      "ext-couchbase": "*"
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
@@ -53,7 +56,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Hetbo\\Shelf\\SauronServiceProvider"
+                "Hetbo\\Shelf\\ShelfServiceProvider"
             ]
         }
     },
