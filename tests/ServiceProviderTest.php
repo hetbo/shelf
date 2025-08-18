@@ -36,7 +36,7 @@ class ServiceProviderTest extends TestCase
         $configValue = config('shelf.default_disk');
 
         // Replace 'local' with whatever default value you have in your config file
-        $this->assertEquals('local', $configValue);
+        $this->assertEquals('public', $configValue);
 
         // Or test that the config key exists at all
         $this->assertTrue(config()->has('shelf'));

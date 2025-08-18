@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Tests\Feature\FilesMigrationTest" file="tests\Feature\FilesMigrationTest.php" tests="1" assertions="3" errors="0" failures="0" skipped="0" time="1.844668">
-    <testcase name="it runs the migration [shelf_file_metadata table] successfully" file="tests\Feature\FilesMigrationTest.php::it runs the migration [shelf_file_metadata table] successfully" class="Tests\Feature\FilesMigrationTest" classname="Tests.Feature.FilesMigrationTest" assertions="3" time="1.844668"/>
+  <testsuite name="Tests\Feature\FileManagementFlowTest" file="tests\Feature\FileManagementFlowTest.php" tests="1" assertions="4" errors="0" failures="0" skipped="0" time="4.653403">
+    <testcase name="complete end-to-end file management scenario" file="tests\Feature\FileManagementFlowTest.php::complete end-to-end file management scenario" class="Tests\Feature\FileManagementFlowTest" classname="Tests.Feature.FileManagementFlowTest" assertions="4" time="4.653403"/>
   </testsuite>
 </testsuites>
