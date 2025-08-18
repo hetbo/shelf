@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Tests\Feature\FileServiceTest" file="tests\Feature\FileServiceTest.php" tests="1" assertions="0" errors="1" failures="0" skipped="0" time="1.653748">
-    <testcase name="it can filter files by user" file="tests\Feature\FileServiceTest.php::it can filter files by user" class="Tests\Feature\FileServiceTest" classname="Tests.Feature.FileServiceTest" assertions="0" time="1.653748">
-      <error type="Error">it can filter files by userError: Class "User" not found&#13;
-at tests\Feature\FileServiceTest.php:123</error>
-    </testcase>
+  <testsuite name="Tests\Feature\FileManagementFlowTest" file="tests\Feature\FileManagementFlowTest.php" tests="1" assertions="4" errors="0" failures="0" skipped="0" time="4.653403">
+    <testcase name="complete end-to-end file management scenario" file="tests\Feature\FileManagementFlowTest.php::complete end-to-end file management scenario" class="Tests\Feature\FileManagementFlowTest" classname="Tests.Feature.FileManagementFlowTest" assertions="4" time="4.653403"/>
   </testsuite>
 </testsuites>

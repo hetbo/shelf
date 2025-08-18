@@ -12,6 +12,7 @@
     "autoload-dev": {
         "psr-4": {
             "Hetbo\\Shelf\\Tests\\": "tests/",
+            "Hetbo\\Shelf\\Tests\\Database\\Factories\\": "tests/database/factories/",
             "Hetbo\\Shelf\\Database\\Factories\\": "database/factories/"
         }
     },
@@ -34,7 +35,8 @@
         "pestphp/pest-plugin-laravel": "^3.2",
         "phpstan/extension-installer": "^1.4.3",
         "phpstan/phpstan-deprecation-rules": "^2.0",
-        "phpstan/phpstan-phpunit": "^2.0"
+        "phpstan/phpstan-phpunit": "^2.0",
+      "ext-couchbase": "*"
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
@@ -54,7 +56,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Hetbo\\Shelf\\SauronServiceProvider"
+                "Hetbo\\Shelf\\ShelfServiceProvider"
             ]
         }
     },
