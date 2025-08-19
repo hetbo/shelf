@@ -2,11 +2,13 @@
 
 namespace Hetbo\Shelf;
 
+use BladeUI\Icons\Factory;
 use Hetbo\Shelf\Contracts\FileableRepositoryInterface;
 use Hetbo\Shelf\Contracts\FileMetadataRepositoryInterface;
 use Hetbo\Shelf\Contracts\FileRepositoryInterface;
 use Hetbo\Shelf\Contracts\FolderRepositoryInterface;
 use Hetbo\Shelf\Http\Routes\ApiRoutes;
+use Hetbo\Shelf\Http\Routes\WebRoutes;
 use Hetbo\Shelf\Repositories\FileableRepository;
 use Hetbo\Shelf\Repositories\FileMetadataRepository;
 use Hetbo\Shelf\Repositories\FileRepository;
@@ -46,6 +48,13 @@ class ShelfServiceProvider extends ServiceProvider {
         $this->app->bind(FileMetadataService::class, function ($app) {
             return new FileMetadataService($app->make(FileMetadataRepositoryInterface::class));
         });
+
+        $this->callAfterResolving(Factory::class, function (Factory $factory) {
+            $factory->add('my', [
+                'path' => __DIR__.'/../resources/svg',
+                'prefix' => 'my',
+            ]);
+        });
     }
 
     public function boot() {
@@ -63,7 +72,10 @@ class ShelfServiceProvider extends ServiceProvider {
 
         // Load migrations
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'shelf');
 
         ApiRoutes::register();
+        WebRoutes::register();
+
     }
 }

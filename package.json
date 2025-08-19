@@ -1,0 +1,39 @@
+{
+  "name": "shelf",
+  "version": "1.0.0",
+  "description": "Streamlined Handling Engine for Laravel Files\r ---",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:js": "esbuild resources/js/main.js --bundle --outfile=dist/main.js --minify",
+    "build:css": "npx @tailwindcss/cli -c tailwind.config.mjs -i resources/css/main.css -o dist/main.css --minify",
+    "build": "npm-run-all build:js build:css",
+    "dev:js": "esbuild resources/js/main.js --bundle --outfile=dist/main.js --watch",
+    "dev:css": "npx @tailwindcss/cli -c tailwind.config.mjs -i resources/css/main.css -o dist/main.css --watch",
+    "dev": "npm-run-all --parallel dev:js dev:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hetbo/shelf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/hetbo/shelf/issues"
+  },
+  "homepage": "https://github.com/hetbo/shelf#readme",
+  "devDependencies": {
+    "esbuild": "^0.25.9",
+    "htmx.org": "^2.0.6",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "tailwindcss": "^4.1.12"
+  }
+}
