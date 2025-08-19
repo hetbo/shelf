@@ -18,29 +18,23 @@
     @include('shelf::library.partials.header')
 
     {{-- Main Content --}}
-{{--
     <div class="shelf:flex shelf:flex-1 shelf:overflow-hidden">
-        --}}
-{{-- Sidebar --}}{{--
+{{-- Sidebar --}}
 
-        @include('shelf:library.partials.sidebar')
+        @include('shelf::library.partials.sidebar')
 
-        --}}
-{{-- File List --}}{{--
+{{-- File List --}}
 
-        @include('shelf:library.partials.file-list')
+        @include('shelf::library.partials.file-list')
 
-        --}}
-{{-- File Details Panel --}}{{--
+{{-- File Details Panel --}}
 
-        @include('shelf:library.partials.file-details')
+        @include('shelf::library.partials.file-details')
     </div>
 
-    --}}
-{{-- Footer --}}{{--
+{{-- Footer --}}
 
-    @include('shelf:library.partials.footer')
---}}
+    @include('shelf::library.partials.footer')
 </div>
 </body>
 
