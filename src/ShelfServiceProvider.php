@@ -17,6 +17,7 @@ use Hetbo\Shelf\Services\FileableService;
 use Hetbo\Shelf\Services\FileMetadataService;
 use Hetbo\Shelf\Services\FileService;
 use Hetbo\Shelf\Services\FolderService;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class ShelfServiceProvider extends ServiceProvider {
@@ -73,6 +74,20 @@ class ShelfServiceProvider extends ServiceProvider {
         // Load migrations
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'shelf');
+
+        Route::get('hetbo/shelf/{file}', function($file) {
+            $path = __DIR__.'/../dist/' . $file;
+
+            if (!file_exists($path) || !str_ends_with($file, '.cjs')) {
+                abort(404);
+            }
+
+            return response()->file($path, [
+                'Content-Type' => 'application/javascript',
+                'Cache-Control' => 'public, max-age=86400',
+            ]);
+        })->where('file', '.*\.cjs$');
+
 
         ApiRoutes::register();
         WebRoutes::register();

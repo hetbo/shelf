@@ -8,12 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:js": "esbuild resources/js/main.js --bundle --outfile=dist/main.js --minify",
-    "build:css": "npx @tailwindcss/cli -c tailwind.config.mjs -i resources/css/main.css -o dist/main.css --minify",
-    "build": "npm-run-all build:js build:css",
-    "dev:js": "esbuild resources/js/main.js --bundle --outfile=dist/main.js --watch",
-    "dev:css": "npx @tailwindcss/cli -c tailwind.config.mjs -i resources/css/main.css -o dist/main.css --watch",
-    "dev": "npm-run-all --parallel dev:js dev:css"
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -22,15 +19,26 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/hetbo/shelf/issues"
   },
   "homepage": "https://github.com/hetbo/shelf#readme",
   "devDependencies": {
-    "esbuild": "^0.25.9",
-    "htmx.org": "^2.0.6",
-    "npm-run-all": "^4.1.5"
+    "@eslint/js": "^9.33.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.1",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "prettier": "^3.6.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.3"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.12",

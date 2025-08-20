@@ -517,7 +517,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\H\\LaravelProjects\\shelf\\src\\Http\\Routes\\WebRoutes.php' => 
     array (
-      0 => 'a4f68b8bb1bfe8c506ae8368b629affd213f588d',
+      0 => '522fe939c374567e397bf788e48c8b4c5a4ef69e',
       1 => 
       array (
         0 => 'hetbo\\shelf\\http\\routes\\webroutes',
@@ -929,7 +929,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\H\\LaravelProjects\\shelf\\src\\ShelfServiceProvider.php' => 
     array (
-      0 => '42face114c765a7a71e5e0be98356314265e728f',
+      0 => '9e13315963908c277b3bb88002a4cc1bee170b44',
       1 => 
       array (
         0 => 'hetbo\\shelf\\shelfserviceprovider',
@@ -964,6 +964,24 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         9 => 'hetbo\\shelf\\traits\\getfirstfilebyrole',
         10 => 'hetbo\\shelf\\traits\\getfileroles',
         11 => 'hetbo\\shelf\\traits\\getfileswithmetadata',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\H\\LaravelProjects\\shelf\\src\\Http\\Controllers\\ReactController.php' => 
+    array (
+      0 => '1abcad0c68d4f7af063aeaca01da79c3f1e82740',
+      1 => 
+      array (
+        0 => 'hetbo\\shelf\\http\\controllers\\reactcontroller',
+      ),
+      2 => 
+      array (
+        0 => 'hetbo\\shelf\\http\\controllers\\index',
+        1 => 'hetbo\\shelf\\http\\controllers\\getfiles',
+        2 => 'hetbo\\shelf\\http\\controllers\\upload',
+        3 => 'hetbo\\shelf\\http\\controllers\\delete',
       ),
       3 => 
       array (
