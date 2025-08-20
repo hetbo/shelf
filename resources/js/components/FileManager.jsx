@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Icon from '../icons/Icon'; // Import your new generic component
 
 const FileManager = () => {
     const [files, setFiles] = useState([]);
@@ -51,8 +52,10 @@ const FileManager = () => {
     }
 
     return (
-        <div style={{ padding: '20px' }}>
+        <div style={{ padding: '20px'}}>
             <h1>File Manager</h1>
+            <Icon name="ArchiveIcon" className="shelf:text-sky-500" />
+
 
             <div style={{ margin: '20px 0' }}>
                 <input

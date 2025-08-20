@@ -517,7 +517,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\H\\LaravelProjects\\shelf\\src\\Http\\Routes\\WebRoutes.php' => 
     array (
-      0 => '522fe939c374567e397bf788e48c8b4c5a4ef69e',
+      0 => 'e4476291186af89293392fbe6decb95bbc0580f8',
       1 => 
       array (
         0 => 'hetbo\\shelf\\http\\routes\\webroutes',
@@ -929,7 +929,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'C:\\H\\LaravelProjects\\shelf\\src\\ShelfServiceProvider.php' => 
     array (
-      0 => '9e13315963908c277b3bb88002a4cc1bee170b44',
+      0 => '678c8ae0e210888bd4fa94ec22e2ff118d3ce4e8',
       1 => 
       array (
         0 => 'hetbo\\shelf\\shelfserviceprovider',

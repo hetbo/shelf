@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite dev",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:css": "npx @tailwindcss/cli -i ./resources/css/main.css -o ./dist/shelf.css --minify"
   },
   "repository": {
     "type": "git",
@@ -38,7 +39,8 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "typescript": "^5.9.2",
-    "vite": "^7.1.3"
+    "vite": "^7.1.3",
+    "vite-plugin-svgr": "^4.3.0"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.12",

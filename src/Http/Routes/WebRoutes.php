@@ -12,7 +12,7 @@ class WebRoutes {
         Route::group([
             'prefix' => 'shelf',
             'as' => 'shelf.',
-            'middleware' => ['web'],
+            'middleware' => ['web' , 'auth'],
         ], function () {
 
                 Route::get('/', [ReactController::class, 'index'])->name('zero');

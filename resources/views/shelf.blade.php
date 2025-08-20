@@ -10,6 +10,7 @@
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
         #shelf-root { min-height: 100vh; background: #f5f5f5; }
     </style>
+    <link rel="stylesheet" href="{{ url('hetbo/shelf/shelf.css') }}">
 </head>
 <body>
 <div id="shelf-root"></div>

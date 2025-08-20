@@ -17,6 +17,7 @@ use Hetbo\Shelf\Services\FileableService;
 use Hetbo\Shelf\Services\FileMetadataService;
 use Hetbo\Shelf\Services\FileService;
 use Hetbo\Shelf\Services\FolderService;
+use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -75,19 +76,25 @@ class ShelfServiceProvider extends ServiceProvider {
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'shelf');
 
-        Route::get('hetbo/shelf/{file}', function($file) {
-            $path = __DIR__.'/../dist/' . $file;
+        Route::get('hetbo/shelf/{file}', function ($file) {
+            $path = __DIR__ . '/../dist/' . $file;
 
-            if (!file_exists($path) || !str_ends_with($file, '.cjs')) {
+            // Only allow .css or .cjs files
+            if (!file_exists($path) ||
+                (!str_ends_with($file, '.css') && !str_ends_with($file, '.cjs'))) {
                 abort(404);
             }
 
-            return response()->file($path, [
-                'Content-Type' => 'application/javascript',
-                'Cache-Control' => 'public, max-age=86400',
-            ]);
-        })->where('file', '.*\.cjs$');
+            // Set the appropriate Content-Type
+            $contentType = str_ends_with($file, '.css')
+                ? 'text/css'
+                : 'application/javascript';
 
+            return Response::file($path, [
+                'Content-Type' => $contentType,
+                'Cache-Control' => 'public, max-age=86400', // cache 1 day
+            ]);
+        })->where('file', '.*\.(css|cjs)$');
 
         ApiRoutes::register();
         WebRoutes::register();
